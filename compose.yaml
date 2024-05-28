@@ -12,7 +12,8 @@ services:
       - db-password
     volumes:
       - type: bind
-        source: ../backupdb/files
+        # source: ./backupdb/files
+        source: ./backupdb/simple-db
         target: /var/lib/mysql
       # - db-data:/var/lib/mysql
     environment:
@@ -26,4 +27,4 @@ volumes:
 
 secrets:
   db-password:
-    file: ../backupdb/password/password.txt
+    file: ./backupdb/password/password.txt

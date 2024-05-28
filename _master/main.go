@@ -33,17 +33,5 @@ func main() {
 		ctx.JSON(http.StatusOK, gin.H{"message": "Successfully seed database"})
 	})
 
-	// ctx := context.Background()
-	// listener, err := ngrok.Listen(ctx, config.HTTPEndpoint())
-	// if err != nil {
-	// 	log.Fatalln(err)
-	// }
-
-	// log.Printf("public address: %s\n", listener.Addr())
-
-	// if err := g.RunListener(listener); err != nil {
-	// 	log.Fatalln(err)
-	// }
-
 	g.Run(os.Getenv("SERVER_PORT"))
 }

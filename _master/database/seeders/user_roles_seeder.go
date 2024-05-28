@@ -92,7 +92,7 @@ func UserRoleSeederUp() {
 	userRole := entity.UserRoles{}
 	for _, seed := range seeders {
 		userRole.Role = seed.Role
-		userRole.RoleName = seed.RoleName
+		userRole.RoleName = seed.RoleName	
 		userRole.SectionID = seed.SectionID
 		userRole.CreatedAt = time.Now()
 		userRoleRepo.CreateUserRole(userRole)
